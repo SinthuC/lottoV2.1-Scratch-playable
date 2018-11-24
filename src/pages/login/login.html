@@ -1,0 +1,24 @@
+<ion-content padding text-center class="work" style="background-color: #00ced1">
+    <ion-grid>
+        <ion-row justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <ion-label class="label-lotto">LOTTO</ion-label>
+                <ion-item class="item-user">
+                    <ion-label>
+                        <ion-icon name="md-contact"></ion-icon>
+                    </ion-label>
+                    <ion-input clearInput type="text" placeholder="Username" [(ngModel)]="name"></ion-input>
+                </ion-item>
+                <ion-item class="item-pass">
+                    <ion-label>
+                        <ion-icon name="ios-key"></ion-icon>
+                    </ion-label>
+                    <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+                <button class="btn-login" ion-button block (click)="nextHome()">Login</button>
+                <button class="btn-register" ion-button block (click)="register()">Register</button>
+                <button ion-button block style="background-color: firebrick" (click)="money()">เติมเงิน</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="mana">
+    <ion-title>
+      Scratch Poker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce center text-center class="scroll-content" style="
+  background: url('../../assets/imgs/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow-y: hidden !important;
+  ">
+
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/imgs/scratch.png">
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/imgs/win-up-to.png" style="width:50%">
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/imgs//1000000.png" style="width:60%">
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+
+      <canvas #imageCanvas (touchstart)="startDrawing($event,0)" (touchmove)="moved($event,0)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,1)" (touchmove)="moved($event,1)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,2)" (touchmove)="moved($event,2)" (touchend)="end($event,0)"></canvas>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,3)" (touchmove)="moved($event,3)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,4)" (touchmove)="moved($event,4)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,5)" (touchmove)="moved($event,5)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,6)" (touchmove)="moved($event,6)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,7)" (touchmove)="moved($event,7)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+    <ion-col>
+      <canvas #imageCanvas (touchstart)="startDrawing($event,8)" (touchmove)="moved($event,8)" (touchend)="end($event,0)"></canvas>
+
+    </ion-col>
+  </ion-row>
+  <ion-row style="text-align:center">
+    <h3 style="text-align:center">Open Remaning : {{openRemain}} Time </h3>
+    <img #pointer src="../../assets/imgs/CoinN.png" style=" visibility: hidden">
+    <img #artBoard src="../../assets/imgs/artBoard.jpg" style=" visibility: hidden">
+    <img #dust src="../../assets/imgs/dust.gif" style=" visibility: hidden">
+  </ion-row>
+  
+
+</ion-content>
+<ion-footer disabled="true" style="padding:0;margin:0">
+
+  <button ion-button color="danger" (click)="openModal()" [disabled]="!isDone" full>See Result</button>
+</ion-footer>

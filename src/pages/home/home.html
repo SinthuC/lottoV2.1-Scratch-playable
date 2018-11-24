@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="mana" text-center>
+        <ion-title>HOME</ion-title>
+        <img class="img-top" menuToggle src="../../assets/imgs/user.png" style="height: 30px;width: 30px;margin-top: 0px">
+    </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12>
+                <img width="100%" src="../../assets/imgs/top.png">
+            </ion-col>
+            <ion-col col-12 style="margin-top:5px">
+                <button (click)="nextTicketsl(sl)" class="img-bottom" ion-button>Buy Ticket</button>
+                <img class="img-bottom-left" width="100%" src="../../assets/imgs/Ticket.png">
+                <label class="img-bottom-left-label" width="100%">{{countsl}}</label>
+                <img width="100%" src="../../assets/imgs/g1.png" (click)="nextGame()">
+            </ion-col>
+            <ion-col col-12 style="margin-top:5px">
+                <button (click)="nextTicketfs(fs)" class="img-bottom" ion-button>Buy Ticket</button>
+                <img class="img-bottom-left" width="100%" src="../../assets/imgs/Ticket.png">
+                <label class="img-bottom-left-label" style="bottom: 6%;" width="100%">{{countfs}}</label>
+                <img width="100%" src="../../assets/imgs/g2.png" (click)="nextFruity()">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

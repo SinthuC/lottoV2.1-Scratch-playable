@@ -1,0 +1,53 @@
+
+page-login {
+
+    // $height100: 100%;
+    // .scroll-content {
+    //     overflow-y: hidden;
+    // }
+    // .list {
+    //     height: $height100;
+
+    // }
+    
+    .label-lotto {
+        font-size: 50px;
+        color: white;
+    }
+    .item-user {
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        margin-top: 40px
+    }
+    .item-pass {
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        margin-bottom: 50px;
+    }
+    .btn-login {
+        border-radius: 50px;
+        background-color: green
+    }
+    .btn-register {
+        border-radius: 50px;
+        background-color: blue
+    }
+    $height100: 90%;
+    ion-grid {
+        width:100%;
+        height: $height100;
+    }
+    
+    ion-row {
+        height: $height100;
+    }
+    @media (min-width: 240px) and (max-width: 768px) {
+    
+        ion-col {
+            border: none;
+        }
+    }
+}

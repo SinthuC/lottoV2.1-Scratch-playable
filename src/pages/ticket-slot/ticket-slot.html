@@ -1,0 +1,41 @@
+<!--
+  Generated template for the TicketSlotPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ticketSlot</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row *ngFor="let u of user">
+    <ion-col col-12 style="background-color: blueviolet">
+        <ion-label>ID = {{u.id}}</ion-label>
+    </ion-col>
+    <ion-col col-6 style="background-color: red">
+        <ion-label>Name = {{u.name}}</ion-label>
+    </ion-col>
+    <ion-col col-6 style="background-color: blue">
+        <ion-label>Password = {{u.password}}</ion-label>
+    </ion-col>
+    <ion-col col-6>
+
+        <button ion-button (click)="Delete(u.id)">Delete</button>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button (click)="Edit(u.id)">Edit</button>
+  </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let t of ticket">
+    <ion-col col-12 style="background-color: blueviolet">
+        <ion-label>game = {{t.game}}</ion-label>
+    </ion-col>    
+  </ion-row>
+  <br><br><br>
+</ion-content>
